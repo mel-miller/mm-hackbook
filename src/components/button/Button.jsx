@@ -2,15 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
 
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
+export const Button = ({ primary, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
+    <button type='button' className={['storybook-button', mode].join(' ')} {...props}>
       {label}
     </button>
   );
@@ -22,14 +17,6 @@ Button.propTypes = {
    */
   primary: PropTypes.bool,
   /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /**
    * Button contents
    */
   label: PropTypes.string.isRequired,
@@ -40,8 +27,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
   primary: false,
-  size: 'medium',
   onClick: undefined,
 };
