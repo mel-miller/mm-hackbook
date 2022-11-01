@@ -1,7 +1,7 @@
 .storybook-button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  border: 2px solid #006e99;
+  border: 2px solid #3017a1;
   border-radius: 6rem;
   cursor: pointer;
   display: inline-block;
@@ -11,21 +11,27 @@
 }
 .storybook-button--primary {
   color: white;
-  background-color: #006e99;
+  background-color: #3017a1;
 }
 
 .storybook-button--secondary {
-  color: #006e99;
+  color: #3017a1;
   background-color: transparent;
 }
 
 .storybook-button:hover {
   color: white;
-  background-color: #014864;
-  border-color: #014864;
+  background-color: #de0093;
+  border-color: #de0093;
 }
 
 .storybook-button:focus {
-  outline: 2px solid #006e99;
+  outline: 2px solid #3017a1;
   outline-offset: 3px;
+}
+
+.storybook-button[disabled] {
+  background-color: #ddd;
+  border-color: #ddd;
+  color: #999;
 }
